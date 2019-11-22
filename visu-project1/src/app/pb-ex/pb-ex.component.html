@@ -1,0 +1,39 @@
+<h1>Property Binding</h1>
+
+<p>pb-ex works!</p>
+
+
+<!-- <img [src]='img3'/>
+
+<img [src]='img1'/> -->
+
+<button (click)='showImage("1-1")'>Image 1</button>
+<button (click)='showImage("2-1")'>Image 2</button>
+
+<!-- ============== -->
+
+<button [disabled]='officeHours'>Cash Deposit</button>
+
+<!-- ==================== -->
+<h3 [style.color]='"red"'>This is Style Binding</h3>
+
+<h3 [style.color]='getColor("red")'>This is Style Binding</h3>
+<h3 [style.color]='getColor("green")'>This is Style Binding</h3>
+<h3 [style.color]='getColor("blue")'>This is Style Binding</h3><br>
+
+<!-- =============== -->
+
+<input type="text" [(ngModel)]='newColor'/> <button (click)='changeColor()'>Change Color</button> <br>
+<!-- <button (click)='changeColor("#94a832")'>Indigo</button>
+<button (click)='changeColor("#32a6a8")'>Pink</button>
+<button (click)='changeColor("#a8328b")'>Violet</button>
+<button (click)='changeColor("#a86f32")'>Indigo</button>
+<button (click)='changeColor("#5da832")'>Pink</button>
+<button (click)='changeColor("#3281a8")'>Violet</button> -->
+
+<h3 [style.background-color]='b'>This is Style Binding</h3>
+<!-- ========================== -->
+<button (click)="change()">Change Function</button>
+<p [class]="changeFunc">Viswanth <small>Web Developer</small></p>
+<!-- =================== -->
+<a [href]='link'>Facebook</a>

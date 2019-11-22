@@ -1,0 +1,20 @@
+<p>input-search works!</p>
+
+
+    Input Search:<input #term type="text" name="search"  [(ngModel)]="inputSearch">
+                 <input type="button" value="search" (click)="search()">   
+
+                 <!-- (keyup)="search(term.value)" -->
+
+<!-- <div *ngIf="results.length > 0">
+    <li *ngFor="let result of results ">
+        {{result.title}}
+    </li>
+</div> -->
+
+<ul>
+    <li *ngFor="let result of results2">{{result.title}}</li>
+</ul>
+
+
+<!-- | filter:inputSearch -->

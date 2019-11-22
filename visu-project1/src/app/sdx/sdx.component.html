@@ -1,0 +1,56 @@
+<h1>sdx works!</h1>
+
+<h3>Structural Directives with ngIf</h3>
+
+
+
+<div *ngIf='true'>
+    <p>This is for ngIf Directives</p>
+</div>
+
+<div *ngIf='false'>
+    <p>This is for ngIf Directives</p>
+</div>
+
+<input type="checkbox" [(ngModel)]="Check">checkbox
+
+<div *ngIf='Check'>
+    <h4>lines will show when checkbox enabled</h4>
+</div>
+
+<hr>
+
+
+<app-login *ngIf="officehours(); else a"></app-login>
+
+<ng-template #a>
+    <h4>This is enabled when ngif false</h4>
+</ng-template>  <br><br>
+
+<!-- <button (click)="officehours()">Form</button> -->
+
+
+<!-- ========================= -->
+
+<button (click)="Cars()">Cars</button>
+<button (click)="Electronics()">Electronics</button>
+<button (click)="items=[]; item=[];">Clear</button>
+
+<ul>
+    <li *ngFor="let c of items">
+        {{c}}
+    </li>
+</ul>
+
+
+<ol>
+    <li *ngFor="let e of item">
+        {{e}}
+    </li>
+</ol>
+
+
+
+
+
+

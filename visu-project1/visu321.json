@@ -1,0 +1,226 @@
+{
+  "users2": [
+    {
+      "username": "visu",
+      "password": "78563",
+      "id": 201
+    },
+    {
+      "username": "veera",
+      "password": "3215",
+      "id": 202
+    },
+    {
+      "username": "suma",
+      "password": "9632",
+      "id": 204
+    },
+    {
+      "username": "kishore",
+      "password": "12532",
+      "id": 205
+    },
+    {
+      "username": "visu",
+      "password": "dfghjkmnbvf",
+      "id": 206
+    },
+    {
+      "id": 209,
+      "password": "dfghjkm",
+      "username": "cvbnm"
+    },
+    {
+      "username": "vis",
+      "password": "dfghjk",
+      "id": 520
+    },
+    {
+      "username": "guna",
+      "password": "45676",
+      "id": -2
+    },
+    {
+      "username": "visu",
+      "password": "78563",
+      "id": 521
+    }
+  ],
+  "users3": [
+    {
+      "username": "visu",
+      "password": 12354,
+      "mobile": 9505734011,
+      "email": "viswanathvadla94@gmail.com",
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "username": "suma",
+      "password": 45231,
+      "mobile": 9505734011,
+      "email": "viswanathvadla94@gmail.com",
+      "gender": "male",
+      "languages": "Telugu",
+      "id": 2
+    },
+    {
+      "username": "nag",
+      "password": 4852,
+      "mobile": 7896541230,
+      "email": "visu@gmail.com",
+      "gender": "male",
+      "languages": "English",
+      "id": 3
+    },
+    {
+      "username": "suresh",
+      "password": 78965,
+      "mobile": 9505734011,
+      "email": "viswanath@gmail.com",
+      "gender": "male",
+      "languages": "English",
+      "id": 4
+    },
+    {
+      "username": "veera",
+      "password": 7456,
+      "mobile": 9505734011,
+      "email": "guna@gmail.com",
+      "gender": "male",
+      "languages": "Hindi",
+      "id": 5
+    }
+  ],
+  "users": [
+
+    {
+      "username": "visu@gmail.com",
+      "password": "4321",
+      "id": 201
+    },
+
+
+    {
+      "username": "visu",
+      "password": "4321"
+    },
+    {
+      "username": "suma",
+      "password": "4851"
+    },
+    {
+      "username": "guna",
+      "password": "4011"
+    },
+    {
+      "username": "sony",
+      "password": "4346"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "visu",
+      "job": "Developer",
+      "salary": 25000
+    },
+    {
+      "id": 3,
+      "name": "madhu",
+      "job": "Developer",
+      "salary": 23000
+    },
+    {
+      "id": 4,
+      "name": "sashi",
+      "job": "Programmer",
+      "salary": 22000
+    },
+    {
+      "id": "2",
+      "name": "vijay",
+      "job": "Programmer",
+      "salary": 25000
+    }
+  ],
+  "Students": [
+    {
+      "id": 1,
+      "name": "viswanath",
+      "email": "visu@gmail.com",
+      "city": "kpl",
+      "designation": "developer"
+    },
+    {
+      "id": 2,
+      "name": "suma",
+      "email": "suma@gmail.com",
+      "city": "kpl",
+      "designation": "teacher"
+    },
+    {
+      "id": 3,
+      "name": "Guna",
+      "email": "guna@gmail.com",
+      "city": "kdmr",
+      "designation": "student"
+    },
+    {
+      "id": 4,
+      "name": "sony",
+      "email": "sony@gmail.com",
+      "city": "kdmr",
+      "designation": "student"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "Ename": "visu",
+      "email": "visu@gmail.com",
+      "designation": "developer"
+    },
+    {
+      "id": 2,
+      "Ename": "madhu",
+      "email": "madhu@gmail.com",
+      "designation": "designer"
+    },
+    {
+      "id": 3,
+      "Ename": "vijay",
+      "email": "vijay@gmail.com",
+      "designation": "Engineer"
+    },
+    {
+      "id": 4,
+      "Ename": "sashi",
+      "email": "sashi@gmail.com",
+      "designation": "Analyst"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "visu2",
+      "designation": "developer",
+      "education": "b.tech",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

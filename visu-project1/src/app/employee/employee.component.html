@@ -1,0 +1,49 @@
+<p>employee works!</p>
+
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+    <tr class="danger">
+        <th>INDEX</th>
+        <th>ID</th>
+        <th>ENAME</th>
+        <th>JOB</th>
+        <th>SALARY</th>
+       <th>OPERATIONS</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let e of employees; let i=index" class="success">
+        <td>{{i+1}}</td>
+        <td class="info">{{e.id}}</td>
+        <td>{{e.ename}}</td>
+        <td>{{e.job}}</td>
+        <td>{{e.salary}}</td>
+        <td><button (click)="selectRow(i)" class="btn btn-primary">Select</button> &nbsp;<button (click)="deleteRow(i)" class="btn btn-danger">Delete</button></td>
+    </tr>
+</tbody>
+</table>
+
+<h4>Employees Count is {{msg}}</h4>
+
+<h3>{{date | date: 'yyyy/mm/dd'}}</h3>
+
+<!-- ID:{{x.id}}<br>
+Ename:{{x.ename}}<br>
+Job:{{x.job}}<br>
+Salary:{{x.salary}} -->
+
+ID:<input type="number" [(ngModel)]="x.id"><br>
+Ename:<input type="string" [(ngModel)]="x.ename"><br>
+Job:<input type="string" [(ngModel)]="x.job"><br>
+Salary:<input type="number" [(ngModel)]="x.salary"><br>
+<button (click)="addRow();x={}">Add Row</button>
+<button (click)="updateRow()">Update Row</button>
+
+<button (click)="x={}">Clear All</button>
+
+
+
+<button (click)="status()">status</button>
+
+<h1>{{msge}}</h1>

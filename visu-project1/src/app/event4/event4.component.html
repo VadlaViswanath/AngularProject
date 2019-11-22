@@ -1,0 +1,32 @@
+<p>event4 works!</p>
+
+
+<table border=1>
+    <tr>
+        <td>Maths</td>
+        <td><input type="number" [(ngModel)]='n1'></td>
+        <td>Total</td>
+        <td>{{tot}}</td>
+    </tr>
+
+    <tr>
+            <td>Physics</td>
+            <td><input type="number" [(ngModel)]='n2'></td>
+            <td>Avg</td>
+            <td>{{avge}}</td>
+    </tr>
+
+    <tr>
+                <td>Maths</td>
+                <td><input type="number" [(ngModel)]='n3'></td>
+                <td>Result</td>
+                <td>{{resu}}</td>
+    </tr>
+</table>
+
+
+<button (click)='total()'>Total</button> &nbsp;
+<button (click)='average()'>Average</button>
+<button (click)='result()'>Result</button>
+
+

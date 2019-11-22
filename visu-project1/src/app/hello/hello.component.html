@@ -1,0 +1,43 @@
+<p>hello works!</p>
+
+
+<h1>{{msg}}  visu</h1>
+
+
+<table border="1">
+    <tr>
+        <th>Biscuits</th>
+    </tr>
+
+    <tr>
+        <td>{{message}}</td>
+    </tr>
+</table>
+
+
+<ol>
+    <li *ngFor="let b of message">{{b}}</li>
+</ol>
+
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>DESIGNATION</th>
+        <th>MOBILE</th>
+        <th>GENDER</th>
+    </tr>
+
+    <tr *ngFor="let s of student">
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.designation}}</td>
+        <td>{{s.mobile}}</td>
+        <td>{{s.gender}}</td>
+    </tr>
+</table>
+
+
+<h1>app root</h1>
+

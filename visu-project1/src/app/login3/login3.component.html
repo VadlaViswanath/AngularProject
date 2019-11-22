@@ -1,0 +1,34 @@
+
+<form #myform="ngForm">
+    Username:<input type="text" [(ngModel)]="user.username" name="username"> <br>
+    Password:<input type="password" [(ngModel)]="user.password" name="password"> <br>
+    Id:<input type="number" [(ngModel)]="user.id" name="id">
+    <button (click)="submit()">Submit</button>
+    <button (click)="search(user.id)">select</button>
+    
+</form>
+
+<div class="container">
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>    
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let u of users">
+            <td>{{u.id}}</td>
+            <td>{{u.username}}</td>
+            <td>{{u.password}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+<!-- <button (click)="search(user.username)">Search</button> -->
+
+</div>

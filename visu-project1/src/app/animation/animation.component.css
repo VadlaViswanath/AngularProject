@@ -1,0 +1,10 @@
+.jq{
+    font-size: 64px;
+    background-color: blueviolet;
+    padding: 20px;
+    transform: rotate(30deg);
+    width: 500px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}

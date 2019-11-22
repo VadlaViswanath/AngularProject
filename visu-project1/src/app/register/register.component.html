@@ -1,0 +1,140 @@
+<h2>Template Driven Form </h2>
+
+<div class="container">
+    
+    <div class="col-md-offset-3 col-md-6 ">
+<form #myform="ngForm">
+
+        <div class="form-group">
+                Id:
+                <input type="number" [(ngModel)]="x.id" class="form-control" name="id" required="required" minlength="3" maxlength="20" pattern="^[0-9]*$" #control0="ngModel">
+            
+                <span class="error" *ngIf="control0.touched && control0.invalid && control0.errors.required">ID can't be blank</span>
+
+                <!-- <span class="error" *ngIf="control0.pristine">ID can't be blank</span> -->
+                <!-- <div *ngIf="control0.invalid && (control0.dirty || control0.touched)" class="alert alert-danger">
+                            <div *ngIf="control0.errors.required">
+                                Name is required.
+                            </div>
+                            
+                            <div *ngIf="control0.errors.minlength">
+                                Name must be at least 4 characters long.
+                            </div>
+                </div> -->
+                <span class="error" *ngIf="control0.touched && control0.invalid && control0.errors.minlength">Min: 3 Numbers</span>
+            
+                <span class="error" *ngIf="control0.touched && control0.invalid && control0.errors.pattern">Alphabets only Allowed</span>
+        </div>
+
+        <!-- ==================================== -->
+
+    <div class="form-group">
+    Firstname:
+    <input type="text" [(ngModel)]="x.firstname" class="form-control" name="firstname" required="required" minlength="3" maxlength="20" pattern="^[a-zA-Z]*$" #control1="ngModel">
+
+    <span class="error" *ngIf="control1.touched && control1.invalid && control1.errors.required">Firstname can't be blank</span>
+
+    <span class="error" *ngIf="control1.touched && control1.invalid && control1.errors.minlength">Min: 3 Characters</span>
+
+    <span class="error" *ngIf="control1.touched && control1.invalid && control1.errors.pattern">Alphabets only Allowed</span>
+    </div>
+    <!-- ================== -->
+
+    <div class="form-group">
+    Lastname:
+    <input type="text" [(ngModel)]="x.lastname" class="form-control" name="lastname" required="required" minlength="3" maxlength="20" pattern="^[a-zA-Z]*$" #control2="ngModel">
+
+    <span class="error" *ngIf="control2.touched && control2.invalid && control2.errors.required">Lastname can't be blank</span>
+
+    <span class="error" *ngIf="control2.touched && control2.invalid && control2.errors.minlength">Min: 3 Characters</span>
+
+    <span class="error" *ngIf="control2.touched && control2.invalid && control2.errors.pattern">Alphabets only Allowed</span> 
+    </div>
+    <!-- ================== -->
+    <div class="form-group">
+    Email:
+    <input type="email" [(ngModel)]="x.email" class="form-control" name="email" required="required" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9]+(\.[_a-z0-9]+)*(\.[a-z]{2,15})$" #control3="ngModel">
+
+    <span class="error" *ngIf="control3.touched && control3.invalid && control3.errors.required">Email can't be blank</span>
+
+    <span class="error" *ngIf="control3.touched && control3.invalid && control3.errors.pattern">Email is not valid</span> </div>
+    <!-- ================== -->
+
+     <div class="form-group">
+         Amount:
+         <input type="text" [(ngModel)]="x.amount" class="form-control" name="amount" required="required" minlength="4" pattern="^[0-9]*$" #control4="ngModel" >
+
+         <span class="error" *ngIf="control4.touched && control4.invalid && control4.errors.required">Amount can't be blank</span>
+
+         <span class="error" *ngIf="control4.touched && control4.invalid && control4.errors.pattern">Alphabets not allowed</span>
+
+         <span class="error" *ngIf="control4.touched && control4.invalid && control4.errors.minlength">Number must be 4 digits</span>
+     </div>   
+
+     <div class="form-group">
+         Gender:
+         <input type="radio" [(ngModel)]="x.gender" name="gender" value="male" required="required" #control5="ngModel"> Male
+         <input type="radio" [(ngModel)]="x.gender" name="gender" value="female" required="required" #control5="ngModel"> Female
+
+         <span class="error" *ngIf="control5.touched && control5.invalid && control5.errors.required">Please select Gender</span>
+     </div>
+
+<div class="form-group">
+    Country:
+    <select [(ngModel)]="x.country" name="country" required="required" #control6="ngModel" class="from-control">
+        <option  value="Please select">Please Select</option>
+        <option *ngFor="let s of employees">{{s.country}}</option>
+        
+    </select>
+
+    <span class="error" *ngIf="control6.touched && control6.invalid && control6.errors.required">Please select Country</span>
+</div>
+
+<button class="btn btn-primary" (click)="addRow()" [disabled]="myform.form.invalid">AddRow</button> &nbsp;
+<button class="btn btn-info" (click)="updateRow()">UpdateRow</button> &nbsp;
+
+
+</form>
+
+
+<h4>{{msg}}</h4>
+</div>
+<br><br>
+<!-- {{myform.value | json}} -->
+
+
+<br>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Amount</th>
+            <th>Gender</th>
+            <th>Country</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let e of employees; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{e.id}}</td>
+            <td>{{e.firstname}}</td>
+            <td>{{e.lastname}}</td>
+            <td>{{e.email}}</td>
+            <td>{{e.amount}}</td>
+            <td>{{e.gender}}</td>
+            <td>{{e.country}}</td>
+            <td><button (click)="selectRow(i)" class="btn btn-warning">Select</button> &nbsp; <button (click)="deleteRow(i)" class="btn btn-danger">Delete</button></td>
+        </tr>
+    </tbody>
+    
+</table>
+
+</div>
+

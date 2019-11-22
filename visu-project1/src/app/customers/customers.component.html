@@ -1,0 +1,28 @@
+<p>customers works!</p>
+
+
+<button (click)='getCustomers()'>Display Data</button>
+
+<div class="container">
+    <h1>Root Component Consume API</h1>
+    
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Designation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of customers">
+            <td>{{s.id}}</td>
+            <td>{{s.Ename}}</td>
+            <td>{{s.email}}</td>
+            <td>{{s.designation}}</td>
+        </tr> 
+    </tbody>
+    </table>
+    
+    </div>

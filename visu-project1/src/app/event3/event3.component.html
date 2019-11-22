@@ -1,0 +1,39 @@
+<p>event3 works!</p>
+
+Enter Number:<input type="number" [(ngModel)]='n'>
+
+<button (click)='calculatesquare()'>click</button>
+
+<hr>
+
+<h2>{{msg}}</h2>
+
+<!-- ========================= -->
+
+
+Enter first number:<input type="number" [(ngModel)]='n1'>  <br>
+Enter second number:<input type="number" [(ngModel)]='n2'> <br>
+
+
+<button (click)='add()'>Add</button>
+<button (click)='multiply()'>Multiply</button>
+<button (click)='sub()'>Subtraction</button>
+<button (click)='div()'>Division</button>
+<button (click)='big()'>Biggest</button>
+<button (click)='small()'>Smallest</button> 
+<button (click)='swap()'>Swap</button> 
+<button (click)='clear()'>clear</button> 
+
+<hr>
+
+<h2>{{msg2}}</h2>
+
+<hr>
+
+Enter first String:<input type="text" [(ngModel)]='s1'>  <br>
+Enter second String:<input type="text" [(ngModel)]='s2'> <br><br>
+
+<button (click)="swap2()">Swap String</button>
+
+
+

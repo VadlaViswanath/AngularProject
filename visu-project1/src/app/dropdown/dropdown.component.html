@@ -1,0 +1,127 @@
+<h2>dropdown List</h2>
+ 
+<!-- <select placeholder="options" [(ngModel)]="selectedoption">
+    <option>Select One</option>
+     <option *ngFor="let country of countries">
+        {{country}}
+    </option> 
+    <option value="india">India</option>
+    <option value="usa">USA</option>
+</select> <br><br> -->
+
+
+<!-- ========================== -->
+<select  [(ngModel)]="country" >
+        <option>Select One</option>
+        <!-- <option>India</option>
+        <option>Canada</option>
+        <option>USA</option> -->
+        <option *ngFor="let item of countries">{{item}}</option>
+</select> <br><br>
+
+
+<div [ngSwitch]="country">
+    <p *ngSwitchCase="'India'">
+        <button class="btn btn-success" (click)="navigate()">Click Here</button>  
+    </p>
+
+    <p *ngSwitchCase="'Canada'">
+        <button class="btn btn-primary" (click)="navigate2()">Click here 2</button> 
+    </p>
+
+    <p *ngSwitchCase="'USA'">
+        <button class="btn btn-warning" (click)="navigate2()">Click here 2</button> 
+    </p>
+
+    <p *ngSwitchCase="'Japan'">
+        <button class="btn btn-danger" (click)="navigate()">Click here 2</button> 
+    </p>
+
+    <p *ngSwitchDefault>
+        please select any
+    </p>
+</div>
+
+
+
+<h4>========================================</h4>
+
+<select  [(ngModel)]="selected" >
+    <!-- (change)="changeitem($event)" -->
+<option>Select One</option>
+ <option *ngFor="let item of countries">{{item}}</option>
+</select> <br><br>
+
+
+<div *ngIf="selected">
+    <button class="btn btn-success" (click)="navigate()">Click Here</button>
+</div> <br>
+
+<div *ngIf="selected">
+    <button class="btn btn-primary" (click)="navigate2()">Click here 2</button>
+</div> 
+
+<!-- ============================================ -->
+
+
+
+<!-- <div>
+        <select (change)="selectOption($event.target.value)"
+        [(ngModel)]="selected">
+        <option [value]="item.id" *ngFor="let item of items">{{item.name}}</option>
+         </select>
+      </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========================== -->
+<!-- <form class="form-inline" (ngSubmit)="HelloCorp(f)" #f="ngForm">
+        <div class="select">
+            <select class="form-control col-lg-8" #corporation required>
+                <option *ngFor="let corporation of corporations" [value]="corporationObj">{{corporation.corp_name}}</option>    
+            </select>
+                <button type="submit" class="btn btn-primary manage">Submit</button>
+        </div>
+   </form> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <select>
+        <option (click)="setNav(item)" *ngFor="let item of navs">{{item}}</option>
+</select>
+       
+         <div *ngIf="regTypeSelectedOption == 'option 1'">
+         <button>click</button>
+         </div>
+       
+         <div *ngIf="regTypeSelectedOption == 'option 2'">
+         option 2 
+         </div>
+       
+         <div *ngIf="regTypeSelectedOption == 'option 1'">
+         option 3 
+         </div> -->

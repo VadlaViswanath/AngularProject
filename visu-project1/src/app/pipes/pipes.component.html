@@ -1,0 +1,37 @@
+<p>pipes works!</p>
+
+
+<!-- Employee Id: <input type="number" [(ngModel)]="e.id"><br>
+Employee Name: <input type="string" [(ngModel)]="e.ename"><br>
+Job: <input type="string" [(ngModel)]="e.job"><br>
+Salary: <input type="number" [(ngModel)]="e.salary"><br>
+{{e|json}} -->
+
+<!-- =============== -->
+
+Employee Name:<input type="text" [(ngModel)]="x.name"> <br>
+Date of Birth:<input type="date" [(ngModel)]="x.dob"> <br>
+Employee Salary:<input type="number" [(ngModel)]="x.salary">
+<!-- Date of Birth:<input type="date" [(ngModel)]="dob"> -->
+<br>
+
+<table border="1">
+    <tr>
+        <th>Employee Name</th>
+        <th>Date of Birth</th>
+        <th>Employee Salary</th>
+    </tr>
+
+    <tr>
+        <td>{{x.name | uppercase}} {{x.name | lowercase}} {{x.name | titlecase}} {{x.name | slice:2:5}}</td>
+        <td>{{x.dob | date}}</td>
+        <td>{{x.salary | currency:'INR'}} {{x.salary | currency:'USD'}} {{x.salary | currency:'GBP'}} {{x.salary | currency:'EUR'}}</td>
+    </tr>
+</table>
+
+Short Date : {{x.dob | date:'shortDate'}} <br>
+Medium Date : {{x.dob | date:'medium'}}<br>
+Date Of Birth : {{x.dob | date:'fullDate'}}<br>
+Short Time : {{x.dob | date:'shortTime'}}<br>
+Salary : {{x.salary | number:'4.2-4'}} <br>
+Json Object : {{x | json}}
